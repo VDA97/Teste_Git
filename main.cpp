@@ -3,7 +3,6 @@
 int main(int arc, char **argv)
 {
    SnakeGame s;
-   s.f
-       s.start();
+   s.start();
    return 0;
 }
