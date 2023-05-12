@@ -107,7 +107,7 @@ SnakeGame::SnakeGame()
         snake.push_back(SnakeType(20 + i, 5));
     }
     // Lógica para posicionar a cobra
-    for (int i = 0; i < snake.size(); ++i)
+    for (size_t i = 0; i < snake.size(); ++i)
     {
         move(snake[i].s_y, snake[i].s_x);
         addch(m_snake_char);
@@ -135,7 +135,7 @@ void SnakeGame::m_insert_food()
         int tmpx = rand() % m_maxwidth + 1; // Posições pra comida
         int tmpy = rand() % m_maxheight + 1;
 
-        for (int i = 0; i < snake.size(); ++i)
+        for (size_t i = 0; i < snake.size(); ++i)
         {
             // condições para evitar que a comida surja no meio da snake
             if (snake[i].s_x == tmpx && snake[i].s_y == tmpy)
@@ -232,7 +232,7 @@ bool SnakeGame::_collide()
         return true;
     }
     // colisão com a própria cauda snake
-    for (int i = 2; i < snake.size(); ++i)
+    for (size_t i = 2; i < snake.size(); ++i)
     {
         if (snake[0].s_x == snake[i].s_x && snake[0].s_y == snake[i].s_y)
         {

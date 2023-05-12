@@ -5,7 +5,9 @@ Dependências:
 
 Compile:
 ```sh
-make
-./snakegame
+To compile:
+$ make 
+To run :
+$ ./snakegame
 ```
 # snakeGame
